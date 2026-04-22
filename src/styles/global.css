@@ -1,0 +1,89 @@
+/* ═══════════════════════════════════════════════════════════════
+   GLOBAL STYLES — CP2077 Design Tokens
+   ═══════════════════════════════════════════════════════════════ */
+
+@import url("https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&family=Orbitron:wght@400;500;600;700;800;900&family=Share+Tech+Mono&display=swap");
+
+:root {
+  /* ── Palette ── */
+  --yellow: #fcee0a;
+  --yellow-dim: rgba(252, 238, 10, 0.15);
+  --yellow-glow: rgba(252, 238, 10, 0.4);
+  --red: #ef4444;
+  --red-dim: rgba(239, 68, 68, 0.15);
+  --teal: #22d3ee;
+  --teal-dim: rgba(34, 211, 238, 0.1);
+  --noir: #0a0a0c;
+  --noir-warm: #0e0d0a;
+  --panel: rgba(14, 13, 10, 0.92);
+  --panel-border: rgba(252, 238, 10, 0.08);
+  --text-hi: #e8e6d9;
+  --text-md: #8a8778;
+  --text-lo: #4a473c;
+  --danger: #ff3b3b;
+
+  /* ── Typography ── */
+  --font-display: "Orbitron", sans-serif;
+  --font-body: "Rajdhani", sans-serif;
+  --font-mono: "Share Tech Mono", monospace;
+
+  /* ── Glow ── */
+  --glow-sm: 0 0 6px;
+  --glow-md: 0 0 20px;
+  --glow-lg: 0 0 40px;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scrollbar-width: thin;
+  scrollbar-color: var(--yellow) var(--noir);
+}
+::-webkit-scrollbar {
+  width: 3px;
+}
+::-webkit-scrollbar-track {
+  background: var(--noir);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--yellow);
+}
+
+body {
+  background: var(--noir);
+  color: var(--text-hi);
+  font-family: var(--font-body);
+  font-weight: 400;
+  overflow-x: hidden;
+  cursor: crosshair;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ═══ Shared Keyframes ═══ */
+@keyframes fadeSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes statusPulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.4;
+  }
+}

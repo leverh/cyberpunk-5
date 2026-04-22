@@ -1,0 +1,80 @@
+.section {
+  padding: 10rem 6vw 6rem;
+  position: relative;
+}
+
+.title {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 800;
+  line-height: 1.05;
+  margin-bottom: 2.5rem;
+  color: var(--text-hi);
+}
+.title em {
+  font-style: normal;
+  color: var(--yellow);
+  text-shadow: 0 0 20px var(--yellow-glow);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2px;
+  margin-top: 2rem;
+}
+
+/* ── Individual item ── */
+.item {
+  background: var(--panel);
+  border: 1px solid var(--panel-border);
+  padding: 1.2rem 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  position: relative;
+  overflow: hidden;
+  transition: border-color 0.3s;
+}
+.item:hover {
+  border-color: rgba(252, 238, 10, 0.2);
+}
+
+.fill {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--yellow), var(--red));
+  box-shadow: 0 0 8px var(--yellow-glow);
+  width: 0;
+  transition: width 1.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.itemVis .fill {
+  width: var(--pct);
+}
+
+.cat {
+  font-family: var(--font-mono);
+  font-size: 0.5rem;
+  letter-spacing: 0.25em;
+  color: var(--text-lo);
+  min-width: 80px;
+}
+
+.label {
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--text-hi);
+  flex: 1;
+  letter-spacing: 0.05em;
+}
+
+.pct {
+  font-family: var(--font-display);
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: var(--yellow);
+  text-shadow: var(--glow-sm) var(--yellow-glow);
+}

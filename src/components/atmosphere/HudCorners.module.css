@@ -1,0 +1,10 @@
+.corner {
+  position: fixed;
+  z-index: 9993;
+  pointer-events: none;
+}
+
+.tl { top: 16px; left: 16px; }
+.tr { top: 16px; right: 16px; }
+.bl { bottom: 16px; left: 16px; }
+.br { bottom: 16px; right: 16px; }

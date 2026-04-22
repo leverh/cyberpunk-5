@@ -1,0 +1,20 @@
+.hud {
+  position: fixed;
+  bottom: 20px;
+  right: 24px;
+  z-index: 9994;
+  font-family: var(--font-mono);
+  font-size: 0.6rem;
+  letter-spacing: 0.2em;
+  color: var(--text-lo);
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.live {
+  color: var(--yellow);
+  text-shadow: var(--glow-sm) var(--yellow-glow);
+  animation: statusPulse 2.5s ease-in-out infinite;
+}

@@ -1,0 +1,82 @@
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+  padding: 1.5rem 3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(180deg, rgba(10, 10, 12, 0.95), transparent);
+  transition: background 0.4s, padding 0.3s;
+}
+
+.stuck {
+  background: rgba(10, 10, 12, 0.97);
+  backdrop-filter: blur(12px);
+  padding: 1rem 3rem;
+  border-bottom: 1px solid var(--panel-border);
+}
+
+.brand {
+  font-family: var(--font-display);
+  font-size: 0.9rem;
+  font-weight: 800;
+  letter-spacing: 0.2em;
+  text-decoration: none;
+  color: var(--yellow);
+  text-shadow: var(--glow-sm) var(--yellow-glow);
+}
+
+.links {
+  display: flex;
+  gap: 2.5rem;
+  list-style: none;
+}
+
+.links a {
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--text-lo);
+  transition: color 0.3s, text-shadow 0.3s;
+  position: relative;
+}
+
+.links a::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: var(--yellow);
+  box-shadow: 0 0 4px var(--yellow-glow);
+  transition: width 0.3s;
+}
+
+.links a:hover {
+  color: var(--yellow);
+  text-shadow: var(--glow-sm) var(--yellow-glow);
+}
+
+.links a:hover::after {
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .nav {
+    padding: 1rem 1.5rem;
+  }
+  .links {
+    gap: 1.2rem;
+  }
+  .links a {
+    font-size: 0.65rem;
+    letter-spacing: 0.15em;
+  }
+}

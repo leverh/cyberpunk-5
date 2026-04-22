@@ -1,0 +1,14 @@
+.footer {
+  text-align: center;
+  padding: 4rem 2rem 3rem;
+  border-top: 1px solid var(--panel-border);
+  position: relative;
+  z-index: 2;
+}
+
+.footer p {
+  font-family: var(--font-mono);
+  font-size: 0.55rem;
+  letter-spacing: 0.4em;
+  color: var(--text-lo);
+}

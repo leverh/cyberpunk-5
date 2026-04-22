@@ -1,0 +1,139 @@
+.hero {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 6vw;
+  position: relative;
+}
+
+/* ── Overline ── */
+.overline {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.5em;
+  color: var(--yellow);
+  margin-bottom: 1.5rem;
+  text-shadow: var(--glow-sm) var(--yellow-glow);
+  animation: fadeSlideIn 1s ease-out 0.2s backwards;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.overline::before {
+  content: "";
+  width: 30px;
+  height: 1px;
+  background: var(--yellow);
+  box-shadow: var(--glow-sm) var(--yellow-glow);
+}
+
+/* ── Name + Glitch ── */
+.name {
+  font-family: var(--font-display);
+  font-size: clamp(3.5rem, 10vw, 9rem);
+  font-weight: 900;
+  line-height: 0.9;
+  letter-spacing: 0.04em;
+  color: var(--text-hi);
+  position: relative;
+  animation: heroReveal 1.2s cubic-bezier(0.16, 1, 0.3, 1) 0.4s backwards;
+  margin-top: 7rem;
+}
+.name::before,
+.name::after {
+  content: attr(data-text);
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+}
+.name::before {
+  color: var(--yellow);
+  clip-path: polygon(0 0, 100% 0, 100% 35%, 0 35%);
+  animation: heroGlitch1 4s steps(2) infinite;
+}
+.name::after {
+  color: var(--red);
+  clip-path: polygon(0 65%, 100% 65%, 100% 100%, 0 100%);
+  animation: heroGlitch2 4s steps(2) infinite;
+}
+
+@keyframes heroGlitch1 {
+  0%, 92%, 100% { transform: translate(0); }
+  93% { transform: translate(-4px, 2px); }
+  95% { transform: translate(3px, -1px); }
+  97% { transform: translate(-2px, 3px); }
+}
+@keyframes heroGlitch2 {
+  0%, 90%, 100% { transform: translate(0); }
+  91% { transform: translate(4px, -2px); }
+  94% { transform: translate(-3px, 1px); }
+  96% { transform: translate(2px, -3px); }
+}
+@keyframes heroReveal {
+  from { opacity: 0; transform: translateY(50px) scale(0.97); filter: blur(8px); }
+  to   { opacity: 1; transform: translateY(0) scale(1); filter: blur(0); }
+}
+
+/* ── Subtitle + typing ── */
+.sub {
+  font-family: var(--font-body);
+  font-size: clamp(1rem, 2.5vw, 1.6rem);
+  font-weight: 300;
+  color: var(--text-md);
+  margin-top: 2rem;
+  max-width: 550px;
+  line-height: 1.6;
+  animation: fadeSlideIn 1s ease-out 0.8s backwards;
+}
+
+.typed {
+  font-family: var(--font-mono);
+  font-size: 0.85em;
+  letter-spacing: 0.15em;
+  color: var(--yellow);
+  text-shadow: var(--glow-sm) var(--yellow-glow);
+}
+
+.cursor {
+  animation: statusPulse 1s steps(1) infinite;
+}
+
+/* ── CTAs ── */
+.ctaRow {
+  display: flex;
+  gap: 1.5rem;
+  margin-top: 3rem;
+  animation: fadeSlideIn 1s ease-out 1s backwards;
+  flex-wrap: wrap;
+}
+
+/* ── Scroll prompt ── */
+.scrollPrompt {
+  position: absolute;
+  bottom: 3rem;
+  left: 6vw;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  animation: fadeSlideIn 1s ease-out 1.4s backwards;
+}
+.scrollPrompt span {
+  font-family: var(--font-mono);
+  font-size: 0.6rem;
+  letter-spacing: 0.4em;
+  color: var(--text-lo);
+  text-transform: uppercase;
+}
+
+.scrollLine {
+  width: 40px;
+  height: 1px;
+  background: linear-gradient(90deg, var(--yellow), transparent);
+  animation: scrollPulse 2s ease-in-out infinite;
+}
+
+@keyframes scrollPulse {
+  0%, 100% { opacity: 0.3; width: 40px; }
+  50%      { opacity: 1;   width: 60px; }
+}

@@ -1,0 +1,30 @@
+.header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 1rem;
+}
+
+.id {
+  font-family: var(--font-display);
+  font-size: 0.6rem;
+  font-weight: 700;
+  letter-spacing: 0.3em;
+  color: var(--yellow);
+  text-shadow: var(--glow-sm) var(--yellow-glow);
+  white-space: nowrap;
+}
+
+.line {
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(90deg, rgba(252, 238, 10, 0.2), transparent 80%);
+}
+
+.tag {
+  font-family: var(--font-mono);
+  font-size: 0.55rem;
+  letter-spacing: 0.3em;
+  color: var(--text-lo);
+  white-space: nowrap;
+}

@@ -1,0 +1,84 @@
+.primary {
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 0.85rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  padding: 14px 36px;
+  background: var(--yellow);
+  color: var(--noir);
+  border: none;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  clip-path: polygon(
+    0 0,
+    calc(100% - 12px) 0,
+    100% 12px,
+    100% 100%,
+    12px 100%,
+    0 calc(100% - 12px)
+  );
+  transition: transform 0.2s, box-shadow 0.2s;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 30px rgba(252, 238, 10, 0.3),
+    0 0 60px rgba(252, 238, 10, 0.1);
+}
+
+.primary::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.15),
+    transparent
+  );
+  transition: left 0.5s;
+}
+.primary:hover::after {
+  left: 100%;
+}
+
+/* ── Ghost ── */
+.ghost {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  padding: 14px 32px;
+  background: transparent;
+  color: var(--yellow);
+  border: 1px solid rgba(252, 238, 10, 0.3);
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: border-color 0.3s, box-shadow 0.3s, color 0.3s;
+}
+
+.ghost:hover {
+  border-color: var(--yellow);
+  box-shadow: 0 0 20px rgba(252, 238, 10, 0.1),
+    inset 0 0 20px rgba(252, 238, 10, 0.03);
+  color: var(--text-hi);
+}
+
+.dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--yellow);
+  box-shadow: var(--glow-sm) var(--yellow-glow);
+  display: inline-block;
+}
