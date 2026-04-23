@@ -1,0 +1,145 @@
+.section {
+  padding: 10rem 6vw 6rem;
+  position: relative;
+}
+
+/* ── Header row ── */
+.header {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+  align-items: end;
+  margin-bottom: 4rem;
+}
+@media (max-width: 900px) {
+  .header { grid-template-columns: 1fr; gap: 2rem; }
+}
+
+.title {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 800;
+  line-height: 1.05;
+  color: var(--text-hi);
+}
+.title em {
+  font-style: normal;
+  color: var(--yellow);
+  text-shadow: 0 0 20px var(--yellow-glow);
+}
+
+.intro {
+  font-family: var(--font-body);
+  font-size: 1.1rem;
+  font-weight: 300;
+  line-height: 1.8;
+  color: var(--text-md);
+}
+
+/* ── Grid ── */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2px;
+  background: var(--panel-border);
+  border: 1px solid var(--panel-border);
+}
+@media (max-width: 1000px) {
+  .grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 600px) {
+  .grid { grid-template-columns: 1fr; }
+}
+
+/* ── Card ── */
+.card {
+  background: var(--panel);
+  padding: 2.5rem 2rem;
+  position: relative;
+  overflow: hidden;
+  transition: background 0.3s;
+  cursor: default;
+}
+.card:hover {
+  background: rgba(252, 238, 10, 0.03);
+}
+
+/* left-edge accent on hover */
+.card::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 2px; height: 100%;
+  background: var(--yellow);
+  transform: scaleY(0);
+  transform-origin: top;
+  transition: transform 0.35s ease;
+}
+.card:hover::before {
+  transform: scaleY(1);
+}
+
+/* bottom fill sweep */
+.fill {
+  position: absolute;
+  left: 0; bottom: 0;
+  height: 1px;
+  width: 0;
+  background: linear-gradient(90deg, var(--yellow), var(--red));
+  box-shadow: 0 0 8px var(--yellow-glow);
+  transition: width 0.4s ease;
+}
+.card:hover .fill {
+  width: 100%;
+}
+
+/* ── Watermark number ── */
+.num {
+  position: absolute;
+  top: -0.15em;
+  right: -0.05em;
+  font-family: var(--font-display);
+  font-size: 7rem;
+  font-weight: 900;
+  line-height: 1;
+  color: transparent;
+  -webkit-text-stroke: 1px rgba(252, 238, 10, 0.07);
+  pointer-events: none;
+  user-select: none;
+  transition: -webkit-text-stroke 0.3s;
+}
+.card:hover .num {
+  -webkit-text-stroke: 1px rgba(252, 238, 10, 0.15);
+}
+
+.name {
+  font-family: var(--font-body);
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--text-hi);
+  margin-bottom: 0.75rem;
+  margin-top: 3.5rem;
+}
+
+.desc {
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  font-weight: 300;
+  line-height: 1.7;
+  color: var(--text-md);
+}
+
+.arrow {
+  position: absolute;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  font-size: 1rem;
+  color: var(--text-lo);
+  transition: color 0.3s, transform 0.3s;
+}
+.card:hover .arrow {
+  color: var(--yellow);
+  transform: translate(3px, -3px);
+}

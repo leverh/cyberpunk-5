@@ -23,6 +23,8 @@ import {
   Capabilities,
   Projects,
   Contact,
+  Services,
+  Process 
 } from "./components/sections";
 
 /**
@@ -60,6 +62,12 @@ export default function App() {
 
         <CyberDivider />
         <About />
+
+        <CyberDivider />
+        <Services />
+
+        <CyberDivider />
+        <Process />
 
         <CyberDivider />
         <Capabilities />

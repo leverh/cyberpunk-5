@@ -34,24 +34,41 @@
   gap: 1rem;
   position: relative;
   overflow: hidden;
-  transition: border-color 0.3s;
+  transition: border-color 0.3s, background 0.3s;
+  cursor: default;
 }
 .item:hover {
-  border-color: rgba(252, 238, 10, 0.2);
+  border-color: rgba(252, 238, 10, 0.25);
+  background: rgba(252, 238, 10, 0.03);
 }
 
+/* ── Bottom fill bar — decorative, always sweeps to 100% on scroll-in ── */
 .fill {
   position: absolute;
   left: 0;
   bottom: 0;
   height: 2px;
+  width: 0;
   background: linear-gradient(90deg, var(--yellow), var(--red));
   box-shadow: 0 0 8px var(--yellow-glow);
-  width: 0;
-  transition: width 1.8s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: width 1.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 .itemVis .fill {
-  width: var(--pct);
+  width: 100%;
+}
+
+/* ── Hover: full-height background sweep from left ── */
+.item::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, rgba(252, 238, 10, 0.06), transparent);
+  transform: translateX(-100%);
+  transition: transform 0.4s ease;
+  pointer-events: none;
+}
+.item:hover::before {
+  transform: translateX(0);
 }
 
 .cat {
@@ -60,6 +77,10 @@
   letter-spacing: 0.25em;
   color: var(--text-lo);
   min-width: 80px;
+  transition: color 0.3s;
+}
+.item:hover .cat {
+  color: var(--yellow);
 }
 
 .label {
@@ -69,12 +90,4 @@
   color: var(--text-hi);
   flex: 1;
   letter-spacing: 0.05em;
-}
-
-.pct {
-  font-family: var(--font-display);
-  font-size: 0.7rem;
-  font-weight: 600;
-  color: var(--yellow);
-  text-shadow: var(--glow-sm) var(--yellow-glow);
 }

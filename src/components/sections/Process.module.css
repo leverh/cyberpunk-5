@@ -1,0 +1,110 @@
+.section {
+  padding: 10rem 6vw 6rem;
+  position: relative;
+}
+
+.title {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 800;
+  line-height: 1.05;
+  margin-bottom: 1.5rem;
+  color: var(--text-hi);
+}
+.title em {
+  font-style: normal;
+  color: var(--yellow);
+  text-shadow: 0 0 20px var(--yellow-glow);
+}
+
+.intro {
+  font-family: var(--font-body);
+  font-size: 1.1rem;
+  font-weight: 300;
+  line-height: 1.8;
+  color: var(--text-md);
+  max-width: 560px;
+  margin-bottom: 5rem;
+}
+
+/* ── Steps row ── */
+.steps {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0;
+  position: relative;
+}
+@media (max-width: 800px) {
+  .steps { grid-template-columns: repeat(2, 1fr); gap: 3rem 2rem; }
+  .connector { display: none; }
+}
+@media (max-width: 500px) {
+  .steps { grid-template-columns: 1fr; }
+}
+
+/* horizontal connecting line behind the dots */
+.connector {
+  position: absolute;
+  top: 27px; /* vertically centered on the dot */
+  left: calc(12.5%); /* starts at center of first dot */
+  right: calc(12.5%); /* ends at center of last dot */
+  height: 1px;
+  background: linear-gradient(90deg, var(--yellow), var(--red));
+  opacity: 0.25;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* ── Single step ── */
+.step {
+  padding: 0 1.5rem;
+  position: relative;
+  z-index: 1;
+}
+
+.dotWrap {
+  margin-bottom: 2rem;
+}
+
+.dot {
+  width: 54px; height: 54px;
+  border: 1px solid var(--panel-border);
+  background: var(--noir);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.1em;
+  color: var(--yellow);
+  transition: background 0.3s, border-color 0.3s, box-shadow 0.3s;
+}
+.step:hover .dot {
+  background: var(--yellow);
+  color: var(--noir);
+  border-color: var(--yellow);
+  box-shadow: 0 0 20px var(--yellow-glow);
+}
+
+.name {
+  font-family: var(--font-body);
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--text-hi);
+  margin-bottom: 0.75rem;
+  transition: color 0.3s;
+}
+.step:hover .name {
+  color: var(--yellow);
+}
+
+.desc {
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  font-weight: 300;
+  line-height: 1.7;
+  color: var(--text-md);
+}

@@ -1,104 +1,176 @@
-/* ═══════════════════════════════════════════════════════════════
-   SITE CONFIG
-   ═══════════════════════════════════════════════════════════════
-   All your personal content lives here. Edit this file to
-   customize the portfolio with your own info, projects, skills,
-   and links. No need to touch any component files.
-   ═══════════════════════════════════════════════════════════════ */
-
 export const DEVELOPER = {
   name: "MADE BY EVER",
   handle: "@MADEBYEVER",
   role: "FRONT-END DEVELOPER // CREATIVE TECHNOLOGIST",
-  bio: `Five years crafting interfaces that make people stop and look twice. I live at the intersection of code and aesthetics — building websites, brands, and web apps that feel as good as they function.`,
-  extendedBio: `I'm a front-end developer with a full-stack foundation, based in New York City. What drives me isn't just clean code — it's the moment a design clicks, when the typography, the motion, and the layout all pull together into something that feels inevitable. I work with individuals and businesses to build their web presence from the ground up: websites, branding, and custom web applications. If you care about how your product looks and feels, we'll get along just fine.`,
-  email: "hello@madebyever.com",
+
+  bio: `I'm a front-end developer and creative technologist building web experiences that feel alive - not assembled from a drag-and-drop tool.
+  My focus is on small businesses that deserve better than cookie-cutter templates. `,
+
+  extendedBio: `Every project I take on is built from scratch, with intention, structure, and performance baked in from day one. I sit at the intersection of design and development — I care about how things look
+  and how they run.`,
+
+  email: "contact@madebyever.com",
   github: "https://github.com/leverh",
   linkedin: "https://linkedin.com", // ← update when ready
-  location: "NEW YORK CITY",
+
+  location: "AVAILABLE WORLDWIDE",
   status: "AVAILABLE FOR NEW PROJECTS",
-  portraitImg:
-    "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&h=800&fit=crop&crop=face", // ← swap with your own photo
+
+  portraitImg: "/assets/portrait.jpg", // ← swap with your own photo
 };
 
 export const STATS = [
-  { value: "5+", label: "YEARS ACTIVE" },
+  { value: "5+",  label: "YEARS ACTIVE" },
   { value: "20+", label: "PROJECTS SHIPPED" },
-  { value: "3", label: "SERVICES OFFERED" },
-  { value: "∞", label: "PIXELS PUSHED" },
+  { value: "∞",   label: "NO TEMPLATES" },
+  { value: "100%", label: "CUSTOM BUILDS" },
+];
+
+export const ABOUT_CARDS = [
+  { label: "LOCATION",     value: "Available Worldwide" },
+  { label: "AVAILABILITY", value: "Open for Projects" },
+  { label: "FOCUS",        value: "Small Business & Startups" },
+  { label: "APPROACH",     value: "Custom. Always." },
 ];
 
 export const PROJECTS = [
   {
     id: "PRJ-001",
-    codename: "NEURAL//DASH",
-    type: "CLASSIFIED // WEB APPLICATION",
+    codename: "USA EXPLORER",
+    type: "WEB APPLICATION // INTERACTIVE",
     year: "2025",
     brief:
-      "Real-time analytics platform processing 2M+ daily events with sub-100ms response. Custom WebSocket layer, ML-powered anomaly detection, and a dashboard that makes data feel alive.",
-    stack: ["REACT", "D3.JS", "WEBSOCKET", "PYTHON", "TENSORFLOW"],
-    img: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=900&h=550&fit=crop",
+      "An interactive map tool for businesses that want to showcase locations, service areas, or customer stories — no coding needed to update.",
+    stack: ["REACT", "CSS Modules", "Leaflet.js"],
+    img: "/images/USA.webp",
     accent: "#FCEE0A",
     url: "#",
   },
   {
     id: "PRJ-002",
-    codename: "PHANTOM//UI",
-    type: "DESIGN SYSTEM // OPEN SOURCE",
-    year: "2024",
+    codename: "SUMMIT",
+    type: "SAAS // LANDING PAGE",
+    year: "2025",
     brief:
-      "200+ adaptive components. Built-in a11y, motion primitives, and behavioral theming that responds to user patterns. Adopted by 40+ engineering teams across three continents.",
-    stack: ["TYPESCRIPT", "STORYBOOK", "FIGMA API", "CSS HOUDINI"],
-    img: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=900&h=550&fit=crop",
+      "A high-converting landing page for a SaaS product — designed to turn first-time visitors into sign-ups from the moment they land.",
+    stack: ["REACT", "CSS Modules", "BRANDING"],
+    img: "/images/SaaS.webp",
     accent: "#EF4444",
-    url: "#",
+    url: "https://summit-saas.netlify.app/",
   },
   {
     id: "PRJ-003",
-    codename: "ECHO//COMMERCE",
-    type: "E-COMMERCE // ENTERPRISE",
+    codename: "FIEBER PRINTS",
+    type: "E-COMMERCE // PLATFORM",
     year: "2024",
     brief:
-      "Headless commerce engine doing $12M+ ARR. Custom checkout with 99.97% uptime. Micro-frontend architecture with edge rendering and real-time inventory sync across 200+ SKUs.",
-    stack: ["NEXT.JS", "STRIPE", "GRAPHQL", "REDIS", "DOCKER"],
-    img: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=900&h=550&fit=crop",
+      "A full e-commerce store for a Berlin punk collective — customers can browse, buy, and pay securely, with orders managed from a simple admin panel.",
+    stack: ["REACT", "Next.js", "STRIPE", "NODE.JS", "CSS Modules", "BRANDING"],
+    img: "/images/FieberPrints.webp",
     accent: "#22D3EE",
     url: "#",
   },
   {
     id: "PRJ-004",
-    codename: "VOID//ENGINE",
-    type: "CREATIVE TOOL // EXPERIMENTAL",
-    year: "2023",
+    codename: "EPICENTER HUB",
+    type: "PLATFORM // DASHBOARD",
+    year: "2024",
     brief:
-      "Browser-native 3D scene editor with real-time multiplayer. WebGPU rendering, custom shader graph, CRDT-based state sync. Think Figma if it had a z-axis.",
-    stack: ["THREE.JS", "WEBGPU", "CRDT", "RUST/WASM"],
-    img: "https://images.unsplash.com/photo-1633356122102-3fe601e05bd2?w=900&h=550&fit=crop",
+      "A real-time data dashboard pulling live USGS earthquake data — demonstrating complex API integration, interactive maps, and data visualisation.",
+    stack: ["REACT", "Leaflet.js", "USGS API", "Chart.js", "CSS Modules"],
+    img: "/images/Epicenter.webp",
     accent: "#FCEE0A",
-    url: "#",
+    url: "https://extraordinary-maamoul-73fb24.netlify.app/",
   },
 ];
 
 export const CAPABILITIES = [
-  { label: "REACT / NEXT.JS", pct: 95, cat: "FRONTEND" },
-  { label: "TYPESCRIPT", pct: 92, cat: "FRONTEND" },
-  { label: "NODE / EXPRESS", pct: 88, cat: "BACKEND" },
-  { label: "POSTGRESQL", pct: 85, cat: "BACKEND" },
-  { label: "SYSTEM DESIGN", pct: 90, cat: "ARCHITECTURE" },
-  { label: "THREE.JS / WEBGL", pct: 80, cat: "CREATIVE" },
-  { label: "DEVOPS / AWS", pct: 78, cat: "INFRASTRUCTURE" },
-  { label: "PYTHON / ML", pct: 75, cat: "DATA" },
+  { label: "REACT",   pct: 95, cat: "FRONTEND" },
+  { label: "NEXT.JS",   pct: 95, cat: "FRONTEND" },
+  { label: "HTML / CSS / JS",   pct: 99, cat: "FRONTEND" },
+  { label: "TYPESCRIPT",        pct: 88, cat: "FRONTEND" },
+  { label: "PYTHON",      pct: 90, cat: "BACKEND" },
+  { label: "FIGMA / DESIGN",    pct: 88, cat: "DESIGN" },
+  { label: "BRANDING / IDENTITY", pct: 82, cat: "DESIGN" },
+  { label: "GSAP / ANIMATION",  pct: 80, cat: "CREATIVE" },
+  { label: "THREE.JS",  pct: 80, cat: "CREATIVE" },
+  { label: "SEO / PERFORMANCE", pct: 90, cat: "INFRASTRUCTURE" },
+  { label: "NODE / APIs",       pct: 75, cat: "BACKEND" },
+  { label: "FRAMER / WEBFLOW",  pct: 78, cat: "TOOLS" },
 ];
 
 export const NAV_LINKS = [
-  { label: "ABOUT", href: "#about" },
-  { label: "SKILLS", href: "#capabilities" },
-  { label: "WORK", href: "#projects" },
-  { label: "CONTACT", href: "#contact" },
+  { label: "ABOUT",    href: "#about" },
+  { label: "SERVICES", href: "#services" },
+  { label: "SKILLS",   href: "#capabilities" },
+  { label: "WORK",     href: "#projects" },
+  { label: "CONTACT",  href: "#contact" },
+];
+
+export const SERVICES = [
+  {
+    num: "01",
+    // icon: "⬡",
+    name: "Web Design",
+    desc: "Custom layouts with clear visual hierarchy, responsive structure, and brand-driven design. Built to guide attention — not scatter it.",
+  },
+  {
+    num: "02",
+    // icon: "◈",
+    name: "Front-End Development",
+    desc: "HTML, CSS, JavaScript, React. Clean component-based builds with smooth animations and zero bloat.",
+  },
+  {
+    num: "03",
+    // icon: "◎",
+    name: "Branding",
+    desc: "Logo systems, color palettes, type pairings, and visual identity — so your site and your brand feel like one cohesive thing.",
+  },
+  {
+    num: "04",
+    // icon: "▣",
+    name: "Content Creation",
+    desc: "Copywriting, page structure, and messaging that actually converts. Words that sound like you — not like every other business.",
+  },
+  {
+    num: "05",
+    // icon: "⚡",
+    name: "Performance & SEO",
+    desc: "Fast load times, SEO-ready structure, Core Web Vitals optimized. Sites that rank and don't make users wait.",
+  },
+  {
+    num: "06",
+    // icon: "◇",
+    name: "Landing Pages & Apps",
+    desc: "SaaS landing pages, e-commerce platforms, interactive web apps — anything that needs to convert visitors into customers.",
+  },
+];
+
+export const PROCESS_STEPS = [
+  {
+    num: "01",
+    name: "Intake",
+    desc: "We map out your goals, audience, and scope. What the site needs to do — and for who.",
+  },
+  {
+    num: "02",
+    name: "Design",
+    desc: "Visual direction, layout structure, brand alignment. You see it before a single line of code is written.",
+  },
+  {
+    num: "03",
+    name: "Build",
+    desc: "Responsive front-end development, animations, refinement, and real-device testing.",
+  },
+  {
+    num: "04",
+    name: "Deploy",
+    desc: "Launch, handoff, and support. The system goes live — and you know how to use it.",
+  },
 ];
 
 export const DATA_STREAM_VALUES = [
   "0xF4E2A1", "SYN_ACK", "PORT:443", "TLS1.3",
-  "NODE:7", "PING:12ms", "HEAP:OK", "0xFF00AA",
-  "NET.RUN", "V.2.077", "ICE:NONE", "RAM:16.0",
+  "NODE:7",   "PING:12ms", "HEAP:OK", "0xFF00AA",
+  "NET.RUN",  "V.2.077",  "ICE:NONE", "RAM:16.0",
 ];

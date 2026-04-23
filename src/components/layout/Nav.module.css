@@ -19,6 +19,13 @@
   border-bottom: 1px solid var(--panel-border);
 }
 
+/* keep nav visible and styled above overlay */
+.overlayOpen {
+  background: transparent;
+  border-bottom: none;
+  backdrop-filter: none;
+}
+
 .brand {
   font-family: var(--font-display);
   font-size: 0.9rem;
@@ -27,8 +34,11 @@
   text-decoration: none;
   color: var(--yellow);
   text-shadow: var(--glow-sm) var(--yellow-glow);
+  position: relative;
+  z-index: 10001;
 }
 
+/* ── Desktop links ── */
 .links {
   display: flex;
   gap: 2.5rem;
@@ -68,15 +78,195 @@
   width: 100%;
 }
 
+/* ── Right side: status + trigger ── */
+.navRight {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  position: relative;
+  z-index: 10001;
+}
+
+.status {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-mono);
+  font-size: 0.6rem;
+  letter-spacing: 0.2em;
+  color: var(--text-lo);
+  text-transform: uppercase;
+}
+
+.dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #22c55e;
+  box-shadow: 0 0 6px rgba(34, 197, 94, 0.6);
+  animation: pulse 2s ease-in-out infinite;
+  flex-shrink: 0;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0.35; }
+}
+
+/* ── Mobile trigger button ── */
+.trigger {
+  display: none;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.2em;
+  color: var(--yellow);
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px 0;
+  text-shadow: var(--glow-sm) var(--yellow-glow);
+  transition: opacity 0.2s;
+}
+.trigger:hover { opacity: 0.7; }
+
+/* ── Full-screen overlay ── */
+.overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 9998;
+  background: rgba(10, 10, 12, 0.97);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 6vw;
+
+  /* hidden state */
+  opacity: 0;
+  pointer-events: none;
+  clip-path: inset(0 0 100% 0);
+  transition: opacity 0.4s ease, clip-path 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.overlayVisible {
+  opacity: 1;
+  pointer-events: all;
+  clip-path: inset(0 0 0% 0);
+}
+
+/* scanline texture */
+.scanlines {
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(
+    0deg,
+    transparent,
+    transparent 2px,
+    rgba(255, 255, 255, 0.012) 2px,
+    rgba(255, 255, 255, 0.012) 4px
+  );
+  pointer-events: none;
+}
+
+.overlayInner {
+  position: relative;
+  z-index: 1;
+}
+
+/* ── Overlay nav links ── */
+.overlayLinks {
+  list-style: none;
+  margin-bottom: 4rem;
+}
+
+.overlayItem {
+  overflow: hidden;
+  border-bottom: 1px solid var(--panel-border);
+}
+
+.overlayItem:first-child {
+  border-top: 1px solid var(--panel-border);
+}
+
+.overlayItem a {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  padding: 1.5rem 0;
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 8vw, 4rem);
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  text-decoration: none;
+  color: var(--text-lo);
+  transition: color 0.3s, padding-left 0.3s;
+
+  /* staggered slide-in */
+  transform: translateY(100%);
+  opacity: 0;
+  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), 
+              opacity 0.4s ease,
+              color 0.3s,
+              padding-left 0.3s;
+  transition-delay: calc(var(--i) * 0.07s);
+}
+
+.overlayVisible .overlayItem a {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.overlayItem a:hover {
+  color: var(--yellow);
+  text-shadow: 0 0 40px var(--yellow-glow);
+  padding-left: 1rem;
+}
+
+.overlayNum {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  font-weight: 400;
+  letter-spacing: 0.2em;
+  color: var(--text-lo);
+  min-width: 32px;
+  transition: color 0.3s;
+}
+.overlayItem a:hover .overlayNum {
+  color: var(--yellow);
+}
+
+/* ── Overlay footer ── */
+.overlayFooter {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.4s ease 0.35s, transform 0.4s ease 0.35s;
+}
+.overlayVisible .overlayFooter {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.overlayStatus {
+  font-family: var(--font-mono);
+  font-size: 0.6rem;
+  letter-spacing: 0.25em;
+  color: var(--text-lo);
+  text-transform: uppercase;
+}
+
+/* ── Responsive ── */
 @media (max-width: 768px) {
-  .nav {
-    padding: 1rem 1.5rem;
-  }
-  .links {
-    gap: 1.2rem;
-  }
-  .links a {
-    font-size: 0.65rem;
-    letter-spacing: 0.15em;
-  }
+  .nav { padding: 1rem 1.5rem; }
+  .stuck { padding: 1rem 1.5rem; }
+  .links { display: none; }
+  .status { display: none; }
+  .trigger { display: block; }
+}
+
+@media (min-width: 769px) {
+  .trigger { display: none; }
+  .overlay { display: none; }
 }

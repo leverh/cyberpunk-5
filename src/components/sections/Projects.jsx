@@ -68,7 +68,7 @@ function ProjectCard({ project, index }) {
 export default function Projects() {
   return (
     <section className={styles.section} id="projects">
-      <SectionHeader id="003" tag="CLASSIFIED" />
+      <SectionHeader id="005" tag="CLASSIFIED" />
 
       <Reveal delay={1}>
         <h2 className={styles.title}>

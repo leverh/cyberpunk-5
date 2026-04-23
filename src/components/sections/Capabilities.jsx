@@ -3,7 +3,7 @@ import { CAPABILITIES } from "../../config";
 import { Reveal, SectionHeader } from "../ui";
 import styles from "./Capabilities.module.css";
 
-function CapItem({ label, pct, cat }) {
+function CapItem({ label, cat }) {
   const ref = useRef(null);
   const [vis, setVis] = useState(false);
 
@@ -22,12 +22,10 @@ function CapItem({ label, pct, cat }) {
     <div
       ref={ref}
       className={`${styles.item} ${vis ? styles.itemVis : ""}`}
-      style={{ "--pct": `${pct}%` }}
     >
       <div className={styles.fill} />
       <span className={styles.cat}>{cat}</span>
       <span className={styles.label}>{label}</span>
-      <span className={styles.pct}>{pct}</span>
     </div>
   );
 }
@@ -35,7 +33,7 @@ function CapItem({ label, pct, cat }) {
 export default function Capabilities() {
   return (
     <section className={styles.section} id="capabilities">
-      <SectionHeader id="002" tag="CYBERWARE SCAN" />
+      <SectionHeader id="004" tag="CYBERWARE SCAN" />
 
       <Reveal delay={1}>
         <h2 className={styles.title}>

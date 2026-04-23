@@ -1,8 +1,11 @@
 export {
   DEVELOPER,
   STATS,
+  ABOUT_CARDS,
   PROJECTS,
   CAPABILITIES,
+  SERVICES, 
+  PROCESS_STEPS,
   NAV_LINKS,
   DATA_STREAM_VALUES,
 } from "./siteConfig";

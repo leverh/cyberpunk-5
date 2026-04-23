@@ -26,7 +26,21 @@
   color: var(--text-md);
   font-weight: 300;
   max-width: 500px;
-  margin: 0 auto 3rem;
+  margin: 0 auto 1.5rem;
+}
+
+.email {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  letter-spacing: 0.2em;
+  color: var(--text-lo);
+  text-decoration: none;
+  margin-bottom: 2.5rem;
+  transition: color 0.3s;
+}
+.email:hover {
+  color: var(--yellow);
 }
 
 .buttons {

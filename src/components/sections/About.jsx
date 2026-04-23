@@ -1,4 +1,4 @@
-import { DEVELOPER, STATS } from "../../config";
+import { DEVELOPER, STATS, ABOUT_CARDS } from "../../config";
 import { Reveal, SectionHeader } from "../ui";
 import styles from "./About.module.css";
 
@@ -16,6 +16,7 @@ export default function About() {
       </Reveal>
 
       <div className={styles.grid}>
+        {/* ── Left: bio + terminal ── */}
         <Reveal delay={2}>
           <div className={styles.text}>
             <p>{DEVELOPER.bio}</p>
@@ -34,22 +35,26 @@ export default function About() {
               <br />
               <span className={styles.tTeal}>UPTIME:</span> 99.97%
               <br />
-              <span className={styles.tRed}>WARNING:</span> YOUR WEBSITE DESERVES MORE THAN A TEMPLATE
+              <span className={styles.tRed}>WARNING:</span> YOUR WEBSITE
+              DESERVES MORE THAN A TEMPLATE
             </div>
           </div>
         </Reveal>
 
+        {/* ── Right: info cards ── */}
         <Reveal delay={3}>
-          <div className={styles.portrait}>
-            <div className={`${styles.corner} ${styles.cornerTl}`} />
-            <div className={`${styles.corner} ${styles.cornerTr}`} />
-            <div className={`${styles.corner} ${styles.cornerBl}`} />
-            <div className={`${styles.corner} ${styles.cornerBr}`} />
-            <img src={DEVELOPER.portraitImg} alt="Developer" loading="lazy" />
+          <div className={styles.cards}>
+            {ABOUT_CARDS.map((card) => (
+              <div key={card.label} className={styles.card}>
+                <div className={styles.cardLabel}>{card.label}</div>
+                <div className={styles.cardValue}>{card.value}</div>
+              </div>
+            ))}
           </div>
         </Reveal>
       </div>
 
+      {/* ── Stats row ── */}
       <Reveal delay={4}>
         <div className={styles.statsRow}>
           {STATS.map((s) => (

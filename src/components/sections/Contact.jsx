@@ -5,7 +5,7 @@ import styles from "./Contact.module.css";
 export default function Contact() {
   return (
     <section className={styles.section} id="contact">
-      <SectionHeader id="004" tag="OPEN CHANNEL" />
+      <SectionHeader id="006" tag="OPEN CHANNEL" />
 
       <Reveal delay={1}>
         <h2 className={styles.title}>
@@ -17,10 +17,14 @@ export default function Contact() {
 
       <Reveal delay={2}>
         <p className={styles.message}>
-          Got a contract worth taking? I'm available for freelance ops,
-          full-time positions, and collaborations that push boundaries. Let's
-          build something that matters.
+          Need a site with stronger design, sharper visual presence, and less
+          template energy? I'm available for freelance ops, full-time positions,
+          and collaborations that push boundaries. Let's build something that
+          matters.
         </p>
+        <a href={`mailto:${DEVELOPER.email}`} className={styles.email}>
+          {DEVELOPER.email}
+        </a>
       </Reveal>
 
       <Reveal delay={3}>
