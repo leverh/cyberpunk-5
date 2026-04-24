@@ -1,5 +1,6 @@
 import { DEVELOPER } from "../../config";
 import { Reveal, SectionHeader, ButtonPrimary, ButtonGhost } from "../ui";
+import ContactForm from "./ContactForm";
 import styles from "./Contact.module.css";
 
 export default function Contact() {
@@ -29,9 +30,6 @@ export default function Contact() {
 
       <Reveal delay={3}>
         <div className={styles.buttons}>
-          <ButtonPrimary href={`mailto:${DEVELOPER.email}`}>
-            INITIATE CONTACT
-          </ButtonPrimary>
           <ButtonGhost
             href={DEVELOPER.github}
             target="_blank"
@@ -47,6 +45,10 @@ export default function Contact() {
             LINKEDIN
           </ButtonGhost>
         </div>
+      </Reveal>
+
+      <Reveal delay={4}>
+        <ContactForm />
       </Reveal>
     </section>
   );

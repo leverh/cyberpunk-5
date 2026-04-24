@@ -26,7 +26,9 @@ export default function Hero() {
       </p>
 
       <div className={styles.ctaRow}>
-        <ButtonPrimary href="#projects">VIEW WORK</ButtonPrimary>
+        <ButtonPrimary href="#projects" onClick={() => console.log('clicked')}>
+  VIEW WORK
+</ButtonPrimary>
         <ButtonGhost href="#contact" dot>
           SEND TRANSMISSION
         </ButtonGhost>

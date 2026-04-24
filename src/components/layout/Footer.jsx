@@ -16,6 +16,9 @@ export default function Footer() {
             <a href={link.href}>{link.label}</a>
           </li>
         ))}
+        <li>
+            <a href="/legal">Legal</a>
+        </li>
       </ul>
     </footer>
   );
