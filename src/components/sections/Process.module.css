@@ -45,9 +45,9 @@
 /* horizontal connecting line behind the dots */
 .connector {
   position: absolute;
-  top: 27px; /* vertically centered on the dot */
-  left: calc(12.5%); /* starts at center of first dot */
-  right: calc(12.5%); /* ends at center of last dot */
+  top: 27px; 
+  left: calc(12.5%);
+  right: calc(12.5%);
   height: 1px;
   background: linear-gradient(90deg, var(--yellow), var(--red));
   opacity: 0.25;

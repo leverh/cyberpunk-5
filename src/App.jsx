@@ -27,21 +27,6 @@ import {
   Process 
 } from "./components/sections";
 
-/**
- * Root portfolio component.
- *
- * Architecture:
- *  - Atmosphere layer (canvas, overlays, HUD chrome) renders fixed behind content
- *  - Nav is fixed at top
- *  - Sections scroll naturally, separated by CyberDividers
- *  - Footer at the bottom
- *
- * To add a new section:
- *  1. Create a component in src/components/sections/
- *  2. Import & drop it in the <main> below
- *  3. Add a CyberDivider above it
- *  4. (Optional) Add a nav link in src/config/siteConfig.js
- */
 export default function App() {
   return (
     <>

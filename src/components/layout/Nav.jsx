@@ -7,13 +7,11 @@ export default function Nav() {
   const stuck = useScrolled(80);
   const [open, setOpen] = useState(false);
 
-  // lock body scroll when overlay is open
   useEffect(() => {
     document.body.style.overflow = open ? "hidden" : "";
     return () => { document.body.style.overflow = ""; };
   }, [open]);
 
-  // close on ESC
   useEffect(() => {
     const onKey = (e) => { if (e.key === "Escape") setOpen(false); };
     window.addEventListener("keydown", onKey);

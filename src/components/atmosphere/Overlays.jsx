@@ -1,9 +1,5 @@
 import styles from "./Overlays.module.css";
 
-/**
- * Fixed atmospheric overlays that sit on top of the viewport.
- * All are pointer-events: none so they don't block interaction.
- */
 export default function Overlays() {
   return (
     <>

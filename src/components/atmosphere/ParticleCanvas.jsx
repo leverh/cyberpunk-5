@@ -1,10 +1,6 @@
 import { useRef, useEffect } from "react";
 import styles from "./ParticleCanvas.module.css";
 
-/**
- * Full-viewport canvas with a mouse-reactive particle network.
- * Particles & connections use the CP2077 yellow palette.
- */
 export default function ParticleCanvas() {
   const canvasRef = useRef(null);
   const mouse = useRef({ x: -999, y: -999 });

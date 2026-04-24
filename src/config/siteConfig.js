@@ -11,12 +11,12 @@ export const DEVELOPER = {
 
   email: "contact@madebyever.com",
   github: "https://github.com/leverh",
-  linkedin: "https://linkedin.com", // ← update when ready
+  linkedin: "https://linkedin.com", // ← update
 
   location: "AVAILABLE WORLDWIDE",
   status: "AVAILABLE FOR NEW PROJECTS",
 
-  portraitImg: "/assets/portrait.jpg", // ← swap with your own photo
+  portraitImg: "/assets/portrait.jpg", // tbd
 };
 
 export const STATS = [
