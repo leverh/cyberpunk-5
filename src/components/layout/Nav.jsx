@@ -24,7 +24,7 @@ export default function Nav() {
     <>
       <nav className={`${styles.nav} ${stuck ? styles.stuck : ""} ${open ? styles.overlayOpen : ""}`}>
         <a href="#top" className={styles.brand}>
-          [ EVER ]
+          [ GTC ]
         </a>
 
         {/* Desktop links */}
@@ -40,7 +40,7 @@ export default function Nav() {
           {/* Availability — hidden on mobile */}
           <div className={styles.status}>
             <span className={styles.dot} />
-            Available for projects
+            ACCEPTING CONTRACTS
           </div>
 
           {/* Mobile menu trigger */}
@@ -77,7 +77,7 @@ export default function Nav() {
 
           <div className={styles.overlayFooter}>
             <span className={styles.dot} />
-            <span className={styles.overlayStatus}>Available for projects</span>
+            <span className={styles.overlayStatus}>Accepting contracts</span>
           </div>
         </div>
       </div>

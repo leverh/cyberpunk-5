@@ -17,22 +17,22 @@ function ServiceCard({ num, name, desc }) {
 export default function Services() {
   return (
     <section className={styles.section} id="services">
-      <SectionHeader id="002" tag="SYSTEM CAPABILITIES" />
+      <SectionHeader id="002" tag="AGENCY OPERATIONS" />
 
       <div className={styles.header}>
         <Reveal delay={1}>
           <h2 className={styles.title}>
-            Services
-            <br />
-            <em>offered.</em>
-          </h2>
+  Agency
+  <br />
+  <em>operations.</em>
+</h2>
         </Reveal>
 
         <Reveal delay={2}>
           <p className={styles.intro}>
-            Every engagement is custom — no packages, no upsells. You get
-            exactly what your business needs, built to last.
-          </p>
+  Every engagement is a custom incursion — scoped, executed, and 
+  delivered without overhead. No packages. No retainers. Just results.
+</p>
         </Reveal>
       </div>
 

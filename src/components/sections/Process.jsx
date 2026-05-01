@@ -17,7 +17,7 @@ function ProcessStep({ num, name, desc }) {
 export default function Process() {
   return (
     <section className={styles.section} id="process">
-      <SectionHeader id="003" tag="BUILD SEQUENCE" />
+      <SectionHeader id="003" tag="MISSION PROTOCOL" />
 
       <Reveal delay={1}>
         <h2 className={styles.title}>
@@ -29,9 +29,9 @@ export default function Process() {
 
       <Reveal delay={2}>
         <p className={styles.intro}>
-          A clear build sequence from first brief to finished deployment. No
-          surprises — you always know where we are in the process.
-        </p>
+  Every incursion follows the same sequence. Disciplined execution,
+  zero ambiguity. You always know exactly where the mission stands.
+</p>
       </Reveal>
 
       <Reveal delay={3}>

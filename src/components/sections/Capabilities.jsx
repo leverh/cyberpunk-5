@@ -33,7 +33,7 @@ function CapItem({ label, cat }) {
 export default function Capabilities() {
   return (
     <section className={styles.section} id="capabilities">
-      <SectionHeader id="004" tag="CYBERWARE SCAN" />
+      <SectionHeader id="004" tag="AGENCY CYBERWARE" />
 
       <Reveal delay={1}>
         <h2 className={styles.title}>

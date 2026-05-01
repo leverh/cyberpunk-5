@@ -2,14 +2,14 @@ import { useState } from "react";
 import styles from "./ContactForm.module.css";
 
 const PROJECT_TYPES = [
-  "Web Design",
-  "Front-End Development",
-  "Branding",
-  "Content Creation",
-  "Landing Page",
-  "E-Commerce",
-  "Web App",
-  "Other",
+  "Digital Infiltration",
+  "Identity Synthesis",
+  "Neural-Link UX",
+  "Signal Architecture",
+  "Ghost Branding",
+  "Dark Launch",
+  "Full Incursion (All Of The Above)",
+  "Other / Classified",
 ];
 
 const ENDPOINT = "https://formspree.io/f/mzdyynyg";
@@ -54,9 +54,10 @@ export default function ContactForm() {
     return (
       <div className={styles.successBox}>
         <div className={styles.successTag}>TRANSMISSION RECEIVED</div>
-        <p className={styles.successMsg}>
-          Message received. I'll get back to you within 24–48 hours.
-        </p>
+        // Success message
+<p className={styles.successMsg}>
+  Transmission received. An operative will make contact within 24–48 hours.
+</p>
       </div>
     );
   }
@@ -150,7 +151,7 @@ export default function ContactForm() {
           className={styles.textarea}
           id="message"
           name="message"
-          placeholder="Tell me about your project..."
+          placeholder="Describe the mission. The stranger, the better."
           rows={6}
           value={formData.message}
           onChange={handleChange}

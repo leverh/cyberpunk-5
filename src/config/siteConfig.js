@@ -1,171 +1,211 @@
 export const DEVELOPER = {
-  name: "MADE BY EVER",
-  handle: "@MADEBYEVER",
-  role: "FRONT-END DEVELOPER // CREATIVE TECHNOLOGIST",
-
-  bio: `I'm a front-end developer and creative technologist building web experiences that feel alive - not assembled from a drag-and-drop tool.
-  My focus is on small businesses that deserve better than cookie-cutter templates. `,
-
-  extendedBio: `Every project I take on is built from scratch, with intention, structure, and performance baked in from day one. I sit at the intersection of design and development — I care about how things look
-  and how they run.`,
-
-  email: "contact@madebyever.com",
+  name: "GHOST\nIN THE\nCODE",  // if your hero renders newlines, otherwise keep as-is
+  handle: "GTC-AGENCY // EST. 2019",
+  role: "BESPOKE IDENTITY SYSTEMS // HIGH-IMMERSION DIGITAL EXPERIENCES",
+  location: "DISTRIBUTED // NO FIXED BASE",
+  status: "ACCEPTING NEW CONTRACTS",
+  bio: "We don't build websites. We engineer presence. Ghost In The Code is a boutique digital agency specializing in high-immersion identity systems for brands that refuse to be ordinary.",
+  extendedBio: "Every engagement starts with a single question: what does this brand feel like at 2am, alone, on a screen? We work until the answer is undeniable. No templates. No shortcuts. No noise.",
+  email: "hello@ghostinthecode.io",
   github: "https://github.com/leverh",
-  linkedin: "https://linkedin.com", // ← update
-
-  location: "AVAILABLE WORLDWIDE",
-  status: "AVAILABLE FOR NEW PROJECTS",
-
-  portraitImg: "/assets/portrait.jpg", // tbd
 };
 
 export const STATS = [
-  { value: "5+",  label: "YEARS ACTIVE" },
-  { value: "20+", label: "PROJECTS SHIPPED" },
-  { value: "∞",   label: "NO TEMPLATES" },
-  { value: "100%", label: "CUSTOM BUILDS" },
+  { value: "47+",  label: "MISSIONS COMPLETED" },
+  { value: "12",   label: "ACTIVE CLIENTS" },
+  { value: "∞",    label: "PIXELS PUSHED" },
+  { value: "100%", label: "DELIVERY RATE" },
 ];
 
 export const ABOUT_CARDS = [
-  { label: "LOCATION",     value: "Available Worldwide" },
-  { label: "AVAILABILITY", value: "Open for Projects" },
-  { label: "FOCUS",        value: "Small Business & Startups" },
-  { label: "APPROACH",     value: "Custom. Always." },
+  {
+    label: "AGENCY TYPE",
+    value: "Boutique / Independent",
+  },
+  {
+    label: "BASE OF OPS",
+    value: "Distributed, Global",
+  },
+  {
+    label: "SPECIALIZATION",
+    value: "Identity Systems & Immersive UI",
+  },
+  {
+    label: "ENGAGEMENT MODEL",
+    value: "Contract / Project-Based",
+  },
+  {
+    label: "CLEARANCE LEVEL",
+    value: "CLIENT EYES ONLY",
+  },
+  {
+    label: "CURRENT STATUS",
+    value: "Open for Contracts",
+  },
 ];
 
 export const PROJECTS = [
   {
-    id: "PRJ-001",
-    codename: "USA EXPLORER",
-    type: "WEB APPLICATION // INTERACTIVE",
-    year: "2025",
-    brief:
-      "An interactive map tool for businesses that want to showcase locations, service areas, or customer stories — no coding needed to update.",
-    stack: ["REACT", "CSS Modules", "Leaflet.js"],
-    img: "/images/USA.webp",
-    accent: "#FCEE0A",
-    url: "#",
-  },
-  {
-    id: "PRJ-002",
-    codename: "SUMMIT",
-    type: "SAAS // LANDING PAGE",
-    year: "2025",
-    brief:
-      "A high-converting landing page for a SaaS product — designed to turn first-time visitors into sign-ups from the moment they land.",
-    stack: ["REACT", "CSS Modules", "BRANDING"],
-    img: "/images/SaaS.webp",
-    accent: "#EF4444",
-    url: "https://summit-saas.netlify.app/",
-  },
-  {
-    id: "PRJ-003",
-    codename: "FIEBER PRINTS",
-    type: "E-COMMERCE // PLATFORM",
-    year: "2024",
-    brief:
-      "A full e-commerce store for a Berlin punk collective — customers can browse, buy, and pay securely, with orders managed from a simple admin panel.",
-    stack: ["REACT", "Next.js", "STRIPE", "NODE.JS", "CSS Modules", "BRANDING"],
-    img: "/images/FieberPrints.webp",
+    id: "AXM-001",
+    codename: "AXIOM//SYSTEMS",
+    type: "B2B SAAS // DEVELOPER TOOLING",
     accent: "#22D3EE",
+    brief:
+      "Engineered a high-density developer portal for a distributed infrastructure platform. Designed for engineers who hate marketing — every interaction earns its place.",
+    stack: ["React", "TypeScript", "CSS Modules", "REST API", "Figma"],
     url: "#",
+    img: "/images/axiom.webp",
+    // Image search: "server room blue light long exposure"
   },
   {
-    id: "PRJ-004",
-    codename: "EPICENTER HUB",
-    type: "PLATFORM // DASHBOARD",
-    year: "2024",
+    id: "NDX-002",
+    codename: "NEON DISTRICT",
+    type: "MUSIC COLLECTIVE // UNDERGROUND LABEL",
+    accent: "#EF4444",
     brief:
-      "A real-time data dashboard pulling live USGS earthquake data — demonstrating complex API integration, interactive maps, and data visualisation.",
-    stack: ["REACT", "Leaflet.js", "USGS API", "Chart.js", "CSS Modules"],
-    img: "/images/Epicenter.webp",
+      "Built the digital home for a 12-artist underground collective. High-contrast, high-noise design system built to survive festival posters, dark mode, and OLED screens.",
+    stack: ["React", "Framer Motion", "Vite", "Headless CMS", "CSS Modules"],
+    url: "#",
+    img: "/images/neon-district.webp",
+    // Image search: "concert crowd neon lights fog dark"
+  },
+  {
+    id: "PHX-003",
+    codename: "PHANTOM ATLAS",
+    type: "INDEPENDENT GAME STUDIO // WORLD DESIGN",
     accent: "#FCEE0A",
-    url: "https://extraordinary-maamoul-73fb24.netlify.app/",
+    brief:
+      "Full identity system and interactive world-map UI for an open-world RPG studio. Custom GLSL shaders, scan-line aesthetics, and sub-100ms interaction targets throughout.",
+    stack: ["React", "GLSL", "WebGL", "CSS Modules", "Vite"],
+    url: "#",
+    img: "/images/phantom-atlas.webp",
+    // Image search: "futuristic city aerial night rain reflections"
+  },
+  {
+    id: "VBX-004",
+    codename: "VELDT BIOTECH",
+    type: "HEALTH TECH // SPECULATIVE BIOTECH",
+    accent: "#22D3EE",
+    brief:
+      "Clinical-grade interface design for a genomics data platform. Austere, precise, and deliberately unsettling — a design system built to make complex data feel inevitable.",
+    stack: ["React", "D3.js", "TypeScript", "CSS Modules", "Figma"],
+    url: "#",
+    img: "/images/veldt.webp",
+    // Image search: "laboratory microscope blue light abstract"
   },
 ];
 
 export const CAPABILITIES = [
-  { label: "REACT",   pct: 95, cat: "FRONTEND" },
-  { label: "NEXT.JS",   pct: 95, cat: "FRONTEND" },
-  { label: "HTML / CSS / JS",   pct: 99, cat: "FRONTEND" },
-  { label: "TYPESCRIPT",        pct: 88, cat: "FRONTEND" },
-  { label: "PYTHON",      pct: 90, cat: "BACKEND" },
-  { label: "FIGMA / DESIGN",    pct: 88, cat: "DESIGN" },
-  { label: "BRANDING / IDENTITY", pct: 82, cat: "DESIGN" },
-  { label: "GSAP / ANIMATION",  pct: 80, cat: "CREATIVE" },
-  { label: "THREE.JS",  pct: 80, cat: "CREATIVE" },
-  { label: "SEO / PERFORMANCE", pct: 90, cat: "INFRASTRUCTURE" },
-  { label: "NODE / APIs",       pct: 75, cat: "BACKEND" },
-  { label: "FRAMER / WEBFLOW",  pct: 78, cat: "TOOLS" },
+  // FRONTEND ENGINEERING
+  { cat: "FRONTEND",      label: "React / Next.js" },
+  { cat: "FRONTEND",      label: "TypeScript" },
+  { cat: "FRONTEND",      label: "Vite / Webpack / Turbopack" },
+  { cat: "FRONTEND",      label: "CSS Modules / Styled Components" },
+  { cat: "FRONTEND",      label: "Framer Motion" },
+  { cat: "FRONTEND",      label: "WebGL / Three.js" },
+
+  // VISUAL & INTERACTION
+  { cat: "VISUAL",        label: "GLSL Shader Authoring" },
+  { cat: "VISUAL",        label: "SVG Animation & Morphing" },
+  { cat: "VISUAL",        label: "Canvas API / PixiJS" },
+  { cat: "VISUAL",        label: "Lottie / Rive" },
+  { cat: "VISUAL",        label: "Custom Cursor & Micro-interaction Systems" },
+  { cat: "VISUAL",        label: "Scroll-Driven Animation (GSAP / native)" },
+
+  // IDENTITY SYSTEMS
+  { cat: "IDENTITY",      label: "Design System Architecture" },
+  { cat: "IDENTITY",      label: "Token-Based Theming" },
+  { cat: "IDENTITY",      label: "Figma — Component & Variable Libraries" },
+  { cat: "IDENTITY",      label: "Motion Language Design" },
+  { cat: "IDENTITY",      label: "Brand Voice & Copywriting" },
+  { cat: "IDENTITY",      label: "Iconography & Custom Type Pairing" },
+
+  // INFRASTRUCTURE
+  { cat: "INFRA",         label: "Vercel / Netlify / Cloudflare Pages" },
+  { cat: "INFRA",         label: "CI/CD — GitHub Actions" },
+  { cat: "INFRA",         label: "Headless CMS — Sanity / Contentful" },
+  { cat: "INFRA",         label: "REST & GraphQL Integration" },
+  { cat: "INFRA",         label: "Edge Functions & ISR" },
+  { cat: "INFRA",         label: "Performance Auditing & Core Web Vitals" },
+
+  // IMMERSIVE & EXPERIMENTAL
+  { cat: "IMMERSIVE",     label: "Particle Systems & Generative UI" },
+  { cat: "IMMERSIVE",     label: "Post-Processing Effects (Bloom, CRT, Grain)" },
+  { cat: "IMMERSIVE",     label: "Audio-Reactive Interfaces" },
+  { cat: "IMMERSIVE",     label: "Procedural Texture Generation" },
+  { cat: "IMMERSIVE",     label: "Real-Time Data Visualization (D3 / Recharts)" },
+  { cat: "IMMERSIVE",     label: "WebXR — Experimental Prototyping" },
+
+  // STRATEGY
+  { cat: "STRATEGY",      label: "Information Architecture" },
+  { cat: "STRATEGY",      label: "Conversion-Focused UX" },
+  { cat: "STRATEGY",      label: "Accessibility — WCAG 2.1 AA" },
+  { cat: "STRATEGY",      label: "Dark Launch & Staged Rollout Planning" },
+  { cat: "STRATEGY",      label: "Cross-Functional Client Collaboration" },
+  { cat: "STRATEGY",      label: "Technical Documentation & Handoff" },
 ];
 
 export const NAV_LINKS = [
-  { label: "ABOUT",    href: "#about" },
-  { label: "SERVICES", href: "#services" },
-  { label: "SKILLS",   href: "#capabilities" },
-  { label: "WORK",     href: "#projects" },
-  { label: "CONTACT",  href: "#contact" },
+  { href: "#about",        label: "DOSSIER" },
+  { href: "#services",     label: "OPERATIONS" },
+  { href: "#capabilities", label: "CYBERWARE" },
+  { href: "#projects",     label: "MISSIONS" },
+  { href: "#contact",      label: "TRANSMIT" },
 ];
 
 export const SERVICES = [
   {
     num: "01",
-    // icon: "⬡",
-    name: "Web Design",
-    desc: "Custom layouts with clear visual hierarchy, responsive structure, and brand-driven design. Built to guide attention — not scatter it.",
+    name: "Digital Infiltration",
+    desc: "Full-stack brand incursions. We embed into your market, map the competitive terrain, and surface a presence that cuts through noise.",
   },
   {
     num: "02",
-    // icon: "◈",
-    name: "Front-End Development",
-    desc: "HTML, CSS, JavaScript, React. Clean component-based builds with smooth animations and zero bloat.",
+    name: "Identity Synthesis",
+    desc: "Visual systems engineered from zero. Logomarks, type hierarchies, motion language — cohesive identity built for hostile environments.",
   },
   {
     num: "03",
-    // icon: "◎",
-    name: "Branding",
-    desc: "Logo systems, color palettes, type pairings, and visual identity — so your site and your brand feel like one cohesive thing.",
+    name: "Neural-Link UX",
+    desc: "Interfaces that collapse the gap between intent and action. Interaction design for users who don't read — they feel.",
   },
   {
     num: "04",
-    // icon: "▣",
-    name: "Content Creation",
-    desc: "Copywriting, page structure, and messaging that actually converts. Words that sound like you — not like every other business.",
+    name: "Signal Architecture",
+    desc: "Information systems that hold under pressure. IA, navigation logic, and content strategy for products at scale.",
   },
   {
     num: "05",
-    // icon: "⚡",
-    name: "Performance & SEO",
-    desc: "Fast load times, SEO-ready structure, Core Web Vitals optimized. Sites that rank and don't make users wait.",
+    name: "Ghost Branding",
+    desc: "For clients who need presence without exposure. Unnamed, untracked, unmistakable. We build the identity; you control the reveal.",
   },
   {
     num: "06",
-    // icon: "◇",
-    name: "Landing Pages & Apps",
-    desc: "SaaS landing pages, e-commerce platforms, interactive web apps — anything that needs to convert visitors into customers.",
+    name: "Dark Launch",
+    desc: "Zero-to-live in controlled silence. Staged rollouts, soft launches, and pre-release campaign systems built for precision deployment.",
   },
 ];
 
 export const PROCESS_STEPS = [
   {
     num: "01",
-    name: "Intake",
-    desc: "We map out your goals, audience, and scope. What the site needs to do — and for who.",
+    name: "Reconnaissance",
+    desc: "We map the terrain. Market position, competitor landscape, audience psychology. The brief gets stress-tested before a single pixel moves.",
   },
   {
     num: "02",
-    name: "Design",
-    desc: "Visual direction, layout structure, brand alignment. You see it before a single line of code is written.",
+    name: "Identity Lock",
+    desc: "Visual language, motion principles, type systems, and tone of voice — all defined and documented before build begins. No surprises mid-mission.",
   },
   {
     num: "03",
-    name: "Build",
-    desc: "Responsive front-end development, animations, refinement, and real-device testing.",
+    name: "Incursion",
+    desc: "Full-stack execution. Design and engineering running in parallel. Weekly drops, live previews, and zero radio silence from our end.",
   },
   {
     num: "04",
-    name: "Deploy",
-    desc: "Launch, handoff, and support. The system goes live — and you know how to use it.",
+    name: "Dark Launch",
+    desc: "Staged deployment, performance auditing, and post-launch monitoring. We don't disappear at handoff — we stay on comms until all systems are nominal.",
   },
 ];
 

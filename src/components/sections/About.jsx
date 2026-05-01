@@ -5,14 +5,14 @@ import styles from "./About.module.css";
 export default function About() {
   return (
     <section className={styles.section} id="about">
-      <SectionHeader id="001" tag="IDENTITY VERIFIED" />
+      <SectionHeader id="001" tag="AGENCY DOSSIER" />
 
       <Reveal delay={1}>
         <h2 className={styles.title}>
-          Architect of
-          <br />
-          <em>digital realities.</em>
-        </h2>
+  Engineered for
+  <br />
+  <em>dark terrain.</em>
+</h2>
       </Reveal>
 
       <div className={styles.grid}>
@@ -23,21 +23,20 @@ export default function About() {
             <p>{DEVELOPER.extendedBio}</p>
 
             <div className={styles.terminal}>
-              <span className={styles.tYellow}>$</span> cat status.log
-              <br />
-              <span className={styles.tTeal}>LOCATION:</span>{" "}
-              {DEVELOPER.location}
-              <br />
-              <span className={styles.tTeal}>STATUS:</span>{" "}
-              <span className={styles.tYellow}>{DEVELOPER.status}</span>
-              <br />
-              <span className={styles.tTeal}>CLEARANCE:</span> LEVEL 5
-              <br />
-              <span className={styles.tTeal}>UPTIME:</span> 99.97%
-              <br />
-              <span className={styles.tRed}>WARNING:</span> YOUR WEBSITE
-              DESERVES MORE THAN A TEMPLATE
-            </div>
+  <span className={styles.tYellow}>$</span> cat agency.log
+  <br />
+  <span className={styles.tTeal}>BASE:</span>{" "}
+  {DEVELOPER.location}
+  <br />
+  <span className={styles.tTeal}>STATUS:</span>{" "}
+  <span className={styles.tYellow}>{DEVELOPER.status}</span>
+  <br />
+  <span className={styles.tTeal}>CLEARANCE:</span> LEVEL 5 — NEED TO KNOW
+  <br />
+  <span className={styles.tTeal}>UPTIME:</span> 99.97%
+  <br />
+  <span className={styles.tRed}>WARNING:</span> YOUR BRAND DESERVES BETTER THAN AVERAGE
+</div>
           </div>
         </Reveal>
 

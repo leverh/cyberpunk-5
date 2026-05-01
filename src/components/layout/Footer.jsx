@@ -4,10 +4,10 @@ import styles from "./Footer.module.css";
 export default function Footer() {
   return (
     <footer className={styles.footer}>
-      <div className={styles.logo}>[ EVER ]</div>
+      <div className={styles.logo}>[ GTC ]</div>
 
       <p className={styles.copy}>
-        © {new Date().getFullYear()} MADE BY EVER // HANDCRAFTED IN THE NET // ALL SYSTEMS NOMINAL
+        © {new Date().getFullYear()} GHOST IN THE CODE // ENGINEERED IN THE NET // ALL SYSTEMS NOMINAL
       </p>
 
       <ul className={styles.links}>
@@ -17,7 +17,7 @@ export default function Footer() {
           </li>
         ))}
         <li>
-            <a href="/legal">Legal</a>
+          <a href="/legal">Legal</a>
         </li>
       </ul>
     </footer>

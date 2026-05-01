@@ -26,17 +26,17 @@ export default function Hero() {
       </p>
 
       <div className={styles.ctaRow}>
-        <ButtonPrimary href="#projects" onClick={() => console.log('clicked')}>
-  VIEW WORK
+        <ButtonPrimary href="#projects">
+  VIEW OPERATIONS
 </ButtonPrimary>
-        <ButtonGhost href="#contact" dot>
-          SEND TRANSMISSION
-        </ButtonGhost>
+<ButtonGhost href="#contact" dot>
+  INITIATE CONTACT
+</ButtonGhost>
       </div>
 
       <div className={styles.scrollPrompt}>
         <div className={styles.scrollLine} />
-        <span>SCROLL TO JACK IN</span>
+        <span>SCROLL TO INFILTRATE</span>
       </div>
     </section>
   );

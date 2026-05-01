@@ -18,11 +18,9 @@ export default function Contact() {
 
       <Reveal delay={2}>
         <p className={styles.message}>
-          Need a site with stronger design, sharper visual presence, and less
-          template energy? I'm available for freelance ops, full-time positions,
-          and collaborations that push boundaries. Let's build something that
-          matters.
-        </p>
+  Got a project that needs more than a template and a prayer?
+  Tell us what you're building. We'll tell you if we can make it dangerous.
+</p>
         <a href={`mailto:${DEVELOPER.email}`} className={styles.email}>
           {DEVELOPER.email}
         </a>
@@ -31,19 +29,19 @@ export default function Contact() {
       <Reveal delay={3}>
         <div className={styles.buttons}>
           <ButtonGhost
-            href={DEVELOPER.github}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            GITHUB
-          </ButtonGhost>
-          <ButtonGhost
-            href={DEVELOPER.linkedin}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            LINKEDIN
-          </ButtonGhost>
+  href={DEVELOPER.github}
+  target="_blank"
+  rel="noopener noreferrer"
+>
+  INTEL // GITHUB
+</ButtonGhost>
+<ButtonGhost
+  href={DEVELOPER.linkedin}
+  target="_blank"
+  rel="noopener noreferrer"
+>
+  NETWORK // LINKEDIN
+</ButtonGhost>
         </div>
       </Reveal>
 
