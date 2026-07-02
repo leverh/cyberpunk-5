@@ -4,7 +4,7 @@
 
 ![Project Preview](public/og-image.png)
 
-### [⚡ Live Production Preview](https://ghost-in-the-code.madebyever.com/)
+### [Live Production Preview](https://ghost-in-the-code.madebyever.com/)
 
 ---
 
