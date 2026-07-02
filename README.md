@@ -1,7 +1,6 @@
 # Ghost In The Code
 
-> A fast, considered web experience built with precision. 
-
+> A brand that lives in the dark.Engineered for atmosphere.
 ![Project Preview](public/og-image.png)
 
 ### [Live Production Preview](https://ghost-in-the-code.madebyever.com/)
