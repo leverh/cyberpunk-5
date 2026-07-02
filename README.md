@@ -1,4 +1,4 @@
-# [Ghost In The Code]
+# Ghost In The Code
 
 > A fast, considered web experience built with precision. 
 
