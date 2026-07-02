@@ -1,6 +1,6 @@
 # Ghost In The Code
 
-> A brand that lives in the dark.Engineered for atmosphere.
+> A brand that lives in the dark. Engineered for atmosphere.
 
 ![Project Preview](public/og-image.png)
 
